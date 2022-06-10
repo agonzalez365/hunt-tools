@@ -1,7 +1,25 @@
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: #080808;
+}
+
 .nav-links {
-    color: red;
+    padding: 1rem 3rem;
+
+    text-decoration: none;
+    color: #adb2b2;
+    background-color: #101010;
+}
+
+.nav-links:hover:not(.active) {
+    color: #faefed;
+    background-color: #1a1919;
 }
 
 .active {
-    color: yellow;
+    color: #faefed;
+    background-color: #54171c;
 }

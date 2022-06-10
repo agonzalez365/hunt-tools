@@ -5,6 +5,7 @@ import './index.css';
 import Nav from './Nav.js';
 import DamageVis from './Damage-Visualizer/DamageVis';
 import LoadoutMain from './Loadout-Randomizer/LoadoutMain';
+import Credits from './Credits';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -15,6 +16,7 @@ root.render(
       <Routes>
         <Route path='/loadouts' element={<LoadoutMain />}></Route>
         <Route path='/damage-visualizer' element={<DamageVis />}></Route>
+        <Route path='/credits' element={<Credits />}></Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

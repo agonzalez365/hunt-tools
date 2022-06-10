@@ -7,8 +7,9 @@ class Nav extends React.Component {
     render() {
         return (
             <nav>
-                <NavLink to='loadouts'>Loadout Randomizer</NavLink>
-                <NavLink to='damage-visualizer'>Damage Visualizer</NavLink>
+                <NavLink className='nav-links' to='loadouts'>Loadout Randomizer</NavLink>
+                <NavLink className='nav-links' to='damage-visualizer'>Damage Visualizer</NavLink>
+                <NavLink className='nav-links' to='credits'>Credits</NavLink>
             </nav>
         );
     }
