@@ -1,13 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
-import App from './App';
+import Nav from './Nav.js';
+import DamageVis from './Damage-Visualizer/DamageVis';
+import LoadoutMain from './Loadout-Randomizer/LoadoutMain';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Nav />
+      <Routes>
+        <Route path='/loadouts' element={<LoadoutMain />}></Route>
+        <Route path='/damage-visualizer' element={<DamageVis />}></Route>
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
