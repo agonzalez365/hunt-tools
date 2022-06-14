@@ -1,0 +1,21 @@
+.bar {
+    width: 200px;
+
+    border-radius: 50%;
+}
+
+.currBar {
+    height: 0.35rem;
+
+    border-top-left-radius: 0.1rem;
+    border-top-right-radius: 0.1rem;
+    background-color: #faefed;
+}
+
+.prevBar {
+    height: 0.35rem;
+
+    border-bottom-left-radius: 0.1rem;
+    border-bottom-right-radius: 0.1rem;
+    background-color: #731420;
+}

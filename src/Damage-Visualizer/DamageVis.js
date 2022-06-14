@@ -5,6 +5,7 @@ class DamageVis extends React.Component {
         return (
             <main>
                 <h1>Damage Visualizer</h1>
+                {this.props.children}
             </main>
         )
     }

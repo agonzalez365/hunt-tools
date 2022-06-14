@@ -5,6 +5,7 @@ class LoadoutMain extends React.Component {
         return (
             <main>
                 <h1>Loadout Randomizer</h1>
+                {this.props.children}
             </main>
         )
     }
