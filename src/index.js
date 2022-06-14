@@ -2,11 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
-import Nav from './Nav.js';
-import DamageVis from './Damage-Visualizer/DamageVis';
-import LoadoutMain from './Loadout-Randomizer/LoadoutMain';
+import Nav from './main-components/Nav.js';
+import DamageVis from './damage-visualizer/DamageVis';
+import LoadoutMain from './loadout-randomizer/LoadoutMain';
 import Credits from './Credits';
-import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -22,8 +21,3 @@ root.render(
     </BrowserRouter>
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
