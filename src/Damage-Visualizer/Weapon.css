@@ -1,0 +1,7 @@
+.weapon {
+    display: flex;
+
+    margin: 1rem;
+
+    outline: solid #a8a9a8;
+}

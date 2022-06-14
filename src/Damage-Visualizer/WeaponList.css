@@ -1,0 +1,10 @@
+.weaponList {
+    margin: 2rem;
+
+    height: 400px;
+    width: 400px;
+
+    outline: solid #a8a9a8;
+    border-radius: 0.2rem;
+    background-color: #070d13;
+}

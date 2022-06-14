@@ -1,11 +1,14 @@
+import './DamageVis.css';
+
 import React from 'react';
 
 class DamageVis extends React.Component {
     render() {
         return (
             <main>
-                <h1>Damage Visualizer</h1>
-                {this.props.children}
+                <div className='container'>
+                    {this.props.children}
+                </div>
             </main>
         )
     }

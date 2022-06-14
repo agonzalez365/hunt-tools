@@ -1,5 +1,6 @@
 .bar {
     width: 200px;
+    margin: 1rem;
 
     border-radius: 50%;
 }

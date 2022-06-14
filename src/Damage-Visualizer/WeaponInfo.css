@@ -1,0 +1,21 @@
+.weaponInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 2rem;
+    
+    height: 500px;
+    width: 500px;
+
+    outline: solid #a8a9a8;
+    border-radius: 0.2rem;
+    background-color: #151d20;
+}
+
+.weaponStats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
