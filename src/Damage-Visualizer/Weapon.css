@@ -2,6 +2,16 @@
     display: flex;
 
     margin: 1rem;
+    padding: 0.5rem;
 
+    border-radius: 0.2rem;
+    outline: solid #a8a9a8;
+    background-color: #333435;
+}
+
+.weapon:hover {
+    cursor: pointer;
+
+    background-color: #515254;
     outline: solid #a8a9a8;
 }

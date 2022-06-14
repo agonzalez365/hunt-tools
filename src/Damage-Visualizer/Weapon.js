@@ -5,7 +5,10 @@ import React from 'react';
 class Weapon extends React.Component {
     render() {
         return (
-            <div className='weapon'>{this.props.name}</div>
+            <div className='weapon'>
+                <img src={this.props.icon} alt="" />
+                <span>{this.props.name}</span>
+            </div>
         );
     }
 }
