@@ -14,6 +14,7 @@ root.render(
     <BrowserRouter>
       <Nav />
       <Routes>
+        <Route path='/' element={<DamageVis />}></Route>
         <Route path='/loadouts' element={<LoadoutMain />}></Route>
         <Route path='/damage-visualizer' element={<DamageVis />}></Route>
         <Route path='/credits' element={<Credits />}></Route>
