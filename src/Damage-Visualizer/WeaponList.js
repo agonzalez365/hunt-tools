@@ -8,9 +8,10 @@ class WeaponList extends React.Component {
     render() {
         return (
                 <div className='weaponList'>
-                    {weaponData.map((weapon) => {
+                    {weaponData.map((weapon, index) => {
+                        console.log(index);
                         return (
-                            <Weapon name={weapon.name} />
+                            <Weapon name={weapon.name} id={index} key={weapon.name} />
                         )
                     })}
                 </div>
