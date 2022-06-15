@@ -5,6 +5,7 @@ class Credits extends React.Component {
         return (
             <main>
                 <h1>Credits</h1>
+                <p>This page is currently under construction.</p>
             </main>
         )
     }
