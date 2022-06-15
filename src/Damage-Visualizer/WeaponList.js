@@ -9,7 +9,6 @@ class WeaponList extends React.Component {
         return (
                 <div className='weaponList'>
                     {weaponData.map((weapon, index) => {
-                        console.log(index);
                         return (
                             <Weapon name={weapon.name} id={index} key={weapon.name} />
                         )
