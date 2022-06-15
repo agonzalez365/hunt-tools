@@ -1,5 +1,4 @@
-{
-    "weapons": [
+const weaponData = [
         {
             "weapon-tree": "Winfield M1873C",
             "name": "Winfield M1873C",
@@ -123,4 +122,4 @@
         }
     ]
 
-}
+export default weaponData;

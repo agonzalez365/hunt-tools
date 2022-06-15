@@ -2,12 +2,17 @@ import './WeaponList.css'
 
 import React from 'react';
 import Weapon from './Weapon';
+import weaponData from '../weapondata';
 
 class WeaponList extends React.Component {
     render() {
         return (
                 <div className='weaponList'>
-                    <Weapon name='Springfield Compact 1866'/>
+                    {weaponData.map((weapon) => {
+                        return (
+                            <Weapon name={weapon.name} />
+                        )
+                    })}
                 </div>
         );
     }

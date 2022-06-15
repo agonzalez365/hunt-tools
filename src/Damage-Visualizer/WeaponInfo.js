@@ -2,6 +2,7 @@ import './WeaponInfo.css';
 
 import React from 'react';
 import Bar from '../main-components/Bar';
+import RangeSlider from '../main-components/RangeSlider'
 
 class WeaponInfo extends React.Component {
     constructor(props) {
@@ -18,7 +19,7 @@ class WeaponInfo extends React.Component {
                 <div className='weaponAmmoAmount'>Ammo Amount:</div>
                 <div className='weaponStats'>
                     <Bar stat='Damage' val='Num'/>
-                    <Bar stat='Range' val={this.state.range}/>
+                    <RangeSlider stat='Range' val='10'/>
                     <Bar stat='Rate of Fire'/>
                     <Bar stat='Max Headshot Range'/>
                     <Bar stat='Handling'/>
