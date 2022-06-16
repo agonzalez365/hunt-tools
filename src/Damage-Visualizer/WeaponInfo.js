@@ -19,7 +19,7 @@ class WeaponInfo extends React.Component {
                 <div className='weaponAmmoAmount'>Ammo Amount:</div>
                 <div className='weaponStats'>
                     <Bar stat='Damage' val='75' maxVal='150'/>
-                    <RangeSlider stat='Range' val='50' minVal='0' maxVal='100'/>
+                    <RangeSlider stat='Range'/>
                     <Bar stat='Rate of Fire'/>
                     <Bar stat='Max Headshot Range'/>
                     <Bar stat='Handling'/>
