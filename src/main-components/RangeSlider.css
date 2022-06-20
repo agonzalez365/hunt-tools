@@ -2,16 +2,3 @@
     width: 200px;
     margin: 1rem;
 }
-
-.rc-slider {
-    height: 10px;
-    width: 100%;
-
-    border-radius: 0.1rem;
-    background-color: #070d13;
-}
-
-.rc-slider:hover {
-    cursor: pointer;
-    outline: solid #a8a9a8;
-}
