@@ -30,7 +30,7 @@ class RangeSlider extends React.Component {
                     }}
                     handleStyle={{
                         height: '22px',
-                        width: '10px',
+                        width: '5px',
                         opacity: '1',
                         border: 'none',
                         borderRadius: '0.1rem',
