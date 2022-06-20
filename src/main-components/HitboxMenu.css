@@ -1,0 +1,14 @@
+.hitboxSelector {
+    width: 200px;
+
+    font-family: 'Joan', serif;
+    font-weight: 600;
+    color: #faefed;
+    background-color: #515254;
+    outline: solid #a8a9a8;
+    border-radius: 0.2rem;
+}
+
+.hitboxSelection {
+    font-weight: 600;
+}

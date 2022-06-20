@@ -3,12 +3,9 @@ import './WeaponInfo.css';
 import React from 'react';
 import Bar from '../main-components/Bar';
 import RangeSlider from '../main-components/RangeSlider'
+import HitboxMenu from '../main-components/HitboxMenu';
 
 class WeaponInfo extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {range: 10}
-    }
 
     render(){
         return (
@@ -28,6 +25,7 @@ class WeaponInfo extends React.Component {
                     <Bar stat='Travel Time'/>
                     <Bar stat='Melee Damage'/>
                     <Bar stat='Heavy Melee Damage'/>
+                    <HitboxMenu />
                 </div>
             </div>
         );

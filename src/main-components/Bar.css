@@ -1,8 +1,11 @@
 .bar {
     width: 200px;
     margin: 1rem;
+}
 
-    border-radius: 50%;
+.barsContainer {
+    border-radius: 0.1rem;
+    background-color: #070d13;
 }
 
 .currBar {
