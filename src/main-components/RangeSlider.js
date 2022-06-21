@@ -17,7 +17,7 @@ class RangeSlider extends React.Component {
             <div className='rangeSliderContainer'>
                 <span className='sliderStat'>{this.props.stat}</span>
                 <span className='sliderVal'>{this.state.value}</span>
-                <Slider min={0} max={500} step={1} draggableTrack={true} defaultValue={this.state.value} onChange={(value) => { this.setState({ value }) }}
+                <Slider min={0} max={300} step={1} draggableTrack={true} defaultValue={this.state.value} onChange={(value) => { this.setState({ value }) }} onAfterChange={() => this.props.onRangeUpdate(this.state.value)}
                     trackStyle={{
                         backgroundColor: '#faefed',
                         height: '11px',
