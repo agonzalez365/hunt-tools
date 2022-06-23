@@ -19,3 +19,12 @@
     align-items: center;
     flex-wrap: wrap;
 }
+
+.weaponDescription {
+    display: flex;
+    text-align: center;
+
+    margin: 0.5rem;
+
+    font-style: italic;
+}

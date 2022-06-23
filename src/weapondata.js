@@ -4,7 +4,7 @@ const weaponData = [
             "name": "Winfield M1873C",
             "description": "Lightened repeating rifle with demi-size internal magazine, capable of firing compact bullets at rapid speed.",
             "size": "3",
-            "ammo-type": "Compact",
+            "ammo-type": "Compact Rifle",
             "ammo-capacity": [
                 "7", "1"
             ],
@@ -24,7 +24,7 @@ const weaponData = [
             "name": "Winfield M1873C Silencer",
             "description": "Lightened repeating rifle with demi-size internal magazine, capable of firing compact bullets at rapid speed. Comes with a silencer.",
             "size": "3",
-            "ammo-type": "Compact",
+            "ammo-type": "Compact Silenced",
             "ammo-capacity": [
                 "7", "1"
             ],
