@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/hunt-tools/static/css/main.56787dc0.css",
-    "main.js": "/hunt-tools/static/js/main.383dec89.js",
+    "main.js": "/hunt-tools/static/js/main.be3b37f8.js",
     "index.html": "/hunt-tools/index.html",
     "main.56787dc0.css.map": "/hunt-tools/static/css/main.56787dc0.css.map",
-    "main.383dec89.js.map": "/hunt-tools/static/js/main.383dec89.js.map"
+    "main.be3b37f8.js.map": "/hunt-tools/static/js/main.be3b37f8.js.map"
   },
   "entrypoints": [
     "static/css/main.56787dc0.css",
-    "static/js/main.383dec89.js"
+    "static/js/main.be3b37f8.js"
   ]
 }
