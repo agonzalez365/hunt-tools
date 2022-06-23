@@ -2,7 +2,6 @@ import React from 'react';
 import './HitboxMenu.css'
 
 class HitboxMenu extends React.Component {
-    state = {}
 
     hitboxes = [
         'Head',
@@ -14,10 +13,10 @@ class HitboxMenu extends React.Component {
 
     render() {
         return (
-            <select className='hitboxSelector'>
+            <select className='hitboxSelector' defaultValue={this.hitboxes[1]}>
                 {this.hitboxes.map((hitbox, index) => {
                     return (
-                        <option className='hitboxSelection' value={hitbox} key={index + hitbox}>{hitbox}</option>
+                        <option className='hitboxSelection' key={index + hitbox}>{hitbox}</option>
                     );
                 })}
             </select>

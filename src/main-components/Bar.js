@@ -11,7 +11,7 @@ class Bar extends React.Component {
             <div className='bar'>
                 <div className='barInfo'>
                     <span className='barStat'>{this.props.stat}</span>
-                    <span className='barVal'>{this.props.val}</span>
+                    <span className='barVal' style={{ 'margin-left': '0.5rem' }}>{this.props.val} {this.props.append}</span>
                 </div>
                 <div className='barsContainer'>
                     <div className='currBar' style={{ width: barPercent }}>

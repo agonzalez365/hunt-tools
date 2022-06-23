@@ -4,58 +4,54 @@ import React from 'react';
 import Bar from '../main-components/Bar';
 import RangeSlider from '../main-components/RangeSlider'
 import HitboxMenu from '../main-components/HitboxMenu';
+import { calcCompactFalloff } from './DamageCalculation';
+import weaponData from '../weapondata';
 
 class WeaponInfo extends React.Component {
     constructor(props) {
         super();
         this.state = {
-            damageVal: 0,
-            rangeVal: 20,
-            handling: 0,
-            reloadSpeed: 0,
-            muzzleVelocity: 0,
+            //weapon stats
+            damageVal: weaponData[0].damage,
+            rangeVal: 0,
+            rof: weaponData[0]['rate-of-fire'],
+            headshotRange: weaponData[0]['headshot-range'],
+            handling: weaponData[0].handling,
+            reloadSpeed: weaponData[0].reload,
+            muzzleVelocity: weaponData[0]['muzzle-velocity'],
+            travelTime: 0,
+            meleeDamage: weaponData[0]['light-melee-damage'],
+            heavyMeleeDamage: weaponData[0]['heavy-melee-damage'],
             hitbox: 'Upper Torso'
         }
+        console.log(weaponData[0]);
     }
 
     handleRangeUpdate = (rangeVal) => {
         console.log('Called', rangeVal);
-        this.setState({ damageVal: this.calculateDamage(110, rangeVal) })
+        this.setState({ damageVal: calcCompactFalloff(110, rangeVal) })
     }
 
-    calculateDamage = (baseDamage, range, hitbox) => {
-        let damagePercent = 1;
-        let rangeAffected;
-        let slopeStart;
-        let slopeRange;
-        let slope;
-
-        if(range > 20) {
-            slopeStart = 20;
-            slopeRange = 10;
-            slope = 0.014;
-
-            rangeAffected = this.calcAffectedRange(slopeStart, slopeRange, range);
-
-            console.log(damagePercent, "current range", rangeAffected);
-            damagePercent -= rangeAffected * slope;
-            console.log("after subtraction: ", damagePercent);
-        }
-        return baseDamage * damagePercent;
+    handleWeaponUpdate = (e) => {
+        //takes index from event and updates relevant values
+        this.setState({
+            damageVal: weaponData[e.detail].damage,
+            rof: weaponData[e.detail]['rate-of-fire'],
+            headshotRange: weaponData[e.detail]['headshot-range'],
+            handling: weaponData[e.detail].handling,
+            reloadSpeed: weaponData[e.detail].reload,
+            muzzleVelocity: weaponData[e.detail]['muzzle-velocity'],
+            meleeDamage: weaponData[e.detail]['light-melee-damage'],
+            heavyMeleeDamage: weaponData[e.detail]['heavy-melee-damage'],
+        });
     }
 
-    //determine what amount we will multiply by the slope by to determine the amount subtracted from damage percent
-    calcAffectedRange = (slopeStart, slopeRange, range) => {
-        let rangeAffected;
+    componentDidMount() {
+        window.addEventListener('weapon-change', this.handleWeaponUpdate);
+    }
 
-        if(slopeStart + slopeRange > range) {
-            rangeAffected = slopeStart + slopeRange - range;
-        }
-        else {
-            rangeAffected = slopeRange;
-        }
-
-        return rangeAffected;
+    componentWillUnmount() {
+        window.removeEventListener('weapon-change', this.handleWeaponUpdate);
     }
 
     render(){
@@ -67,15 +63,15 @@ class WeaponInfo extends React.Component {
                 <div className='weaponAmmoAmount'>Ammo Amount:</div>
                 <div className='weaponStats'>
                     <Bar stat='Damage' val={this.state.damageVal} maxVal='150'/>
-                    <RangeSlider stat='Range' onRangeUpdate={this.handleRangeUpdate} />
-                    <Bar stat='Rate of Fire'/>
-                    <Bar stat='Max Headshot Range'/>
-                    <Bar stat='Handling'/>
-                    <Bar stat='Reload Speed'/>
-                    <Bar stat='Muzzle Velocity'/>
-                    <Bar stat='Travel Time'/>
-                    <Bar stat='Melee Damage'/>
-                    <Bar stat='Heavy Melee Damage'/>
+                    <RangeSlider stat='Range' onRangeUpdate={this.handleRangeUpdate} append='m'/>
+                    <Bar stat='Rate of Fire' val={this.state.rof} maxVal='150' append='rpm'/>
+                    <Bar stat='Max Headshot Range' val={this.state.headshotRange} maxVal='500' append='m'/>
+                    <Bar stat='Handling' val={this.state.handling} maxVal='100' append='%'/>
+                    <Bar stat='Reload Speed' val={this.state.reloadSpeed} maxVal='30' append='sec'/>
+                    <Bar stat='Muzzle Velocity' val={this.state.muzzleVelocity} maxVal='1000' append='m/s'/>
+                    <Bar stat='Travel Time' val={this.state.travelTime} maxVal='150' append='sec'/>
+                    <Bar stat='Melee Damage' val={this.state.meleeDamage} maxVal='150'/>
+                    <Bar stat='Heavy Melee Damage' val={this.state.heavyMeleeDamage} maxVal='150'/>
                     <HitboxMenu />
                 </div>
             </div>
